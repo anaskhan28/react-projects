@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
-let globalID= 0
+import './App.css'
+
 function App() {
   const [task, setTask] = useState("")
   const [todos, setTodos] = useState([])
@@ -34,18 +35,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Best To Do App Ever</h1>
-      <form onSubmit={addItem}>
-      <input  type="text" placeholder="write a todo" value={task} onChange={e=>{
+      <h1 className="title">Awesome TodoList 2X Productivity</h1>
+      <form className="form" onSubmit={addItem}>
+      <input className="input" type="text" placeholder="write a todo" value={task} onChange={e=>{
         setTask(e.target.value)
       }} />
-      <button type="submit">Add item</button>
+      <button className=" button submit" type="submit">Add item</button>
       </form>
-      <ul>
+      <ul className="list">
         {todos.map((todo,index)=>{
           return <div> 
-            <li >{todo}({index})</li>
-            <button onClick={()=>deleteItem(index)} >Delete</button>
+            <li className="sublist">{todo}</li>
+            <button className="button delete" onClick={()=>deleteItem(index)} >Delete</button>
           </div>
         })}
       </ul>
