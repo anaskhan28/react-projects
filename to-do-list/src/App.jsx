@@ -1,32 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import React, {useState, useEffect} from "react"
+let globalID= 0
 function App() {
-  const [count, setCount] = useState(0)
+  const [task, setTask] = useState("")
+  const [todos, setTodos] = useState([])
+  
+  // function createTodo(e){
+  //   e.preventDefault()
+  //   setTodos(oldTodos =>{
+  //     setTask('')
+  //     return [...oldTodos, {todo: task,id:globalID++}]
+  //   })
+  // }
+  function addItem(e){
+    if(e){
+      e.preventDefault();
+      if(task=== ""){
+        alert('Enter a task first')
+      }else{
+        setTodos([...todos,task])
+        setTask('')
+      }
+    }else{
+      setTodos([...todos])
+    }
+  }
+  function deleteItem(index){
+  //   setTodos(oldTodos=>oldTodos.filter(item=>item.id!==itemID))
+  // 
+        todos.splice(index,1)
+        addItem();
+}
+  
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Best To Do App Ever</h1>
+      <form onSubmit={addItem}>
+      <input  type="text" placeholder="write a todo" value={task} onChange={e=>{
+        setTask(e.target.value)
+      }} />
+      <button type="submit">Add item</button>
+      </form>
+      <ul>
+        {todos.map((todo,index)=>{
+          return <div> 
+            <li >{todo}({index})</li>
+            <button onClick={()=>deleteItem(index)} >Delete</button>
+          </div>
+        })}
+      </ul>
     </div>
   )
 }
