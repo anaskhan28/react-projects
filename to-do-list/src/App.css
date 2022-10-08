@@ -4,6 +4,9 @@
     padding: 2rem;
     text-align: center;
   }
+  .App{
+    position:relative;
+  }
 .title{
     font-size: 3rem;
     font-weight: bold;
@@ -18,8 +21,10 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+    
 }
 .form{
+    
     margin: 25px;
 }
 
@@ -86,8 +91,9 @@ li{
 }
 
 .sublist{
+    
     font-size:1.7rem;
     font-weight:bold;
-    color:white;
+    color:#0f2a5f;
     
 }

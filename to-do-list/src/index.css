@@ -7,9 +7,15 @@
     color-scheme: pink white;
     color: rgba(200, 184, 200, 0.87);
     /* background-color:#ebedee; */
-    background-color:#3c3b3f;
+    background-color:#cfd9df;
   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
    
+  }
+  img{
+    position:absolute;
+    margin-top:60px;
+    margin-left:40px;
+  
   }

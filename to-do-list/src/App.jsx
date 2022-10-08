@@ -35,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <h1 className="title">Awesome TodoList 2X Productivity</h1>
       <form className="form" onSubmit={addItem}>
       <input className="input" type="text" placeholder="write a todo" value={task} onChange={e=>{
