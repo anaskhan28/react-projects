@@ -7,7 +7,7 @@ useContext(GameStateContext)
     return(
     <div className="menu">
         <label>Enter Your Name:</label>
-        <input type="text" placeholder = "Ex. John Smith" onChange={(event)=>{
+        <input type="text" placeholder = "Ex. Anas Khan" onChange={(event)=>{
             setUserName(event.target.value)
         }}/>
         <button onClick={()=>{setGameState('playing')}}>Start Quiz</button>

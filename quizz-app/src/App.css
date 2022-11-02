@@ -8,7 +8,7 @@
 
 }
 .menu,
-.quiz{
+.quiz,.endScreen{
   width:500px;
   height:500px;
   border-radius:10px;
@@ -30,5 +30,16 @@
 button:hover{
   cursor:pointer;
   background-color:black;
+  color:white;
+  transition: all 0.5s ease-in;
+}
+.menu,.quiz,.endScreen h1{
+  color:white;
+}
+#nextQuestion, #finished{
+  width:200px;
+
+}
+h3{
   color:white;
 }
