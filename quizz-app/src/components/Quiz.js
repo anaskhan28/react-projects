@@ -5,7 +5,7 @@ import {GameStateContext} from '../helpers/Contexts'
 function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [optionChoosen, setOptionChoosen] = useState("");
-    const {score,setScore,gameState,setGameState} = useContext(GameStateContext)
+    const {score,setScore,setGameState} = useContext(GameStateContext)
 
     const chooseOption = (option)=>{
         setOptionChoosen(option)

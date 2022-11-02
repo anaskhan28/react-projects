@@ -2,7 +2,7 @@ import "../App.css"
 import {useContext} from 'react';
 import {GameStateContext} from "../helpers/Contexts";
 function Menu(){
-const {gameState, setGameState,userName,setUserName} = 
+const {setGameState,setUserName} = 
 useContext(GameStateContext)
     return(
     <div className="menu">
