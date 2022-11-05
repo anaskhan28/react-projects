@@ -1,9 +1,41 @@
 import './App.css';
+import {useState} from 'react'
 
 function App() {
+  
+  const [gameTitle, setGameTitle] = useState('');
+  const [searchGames, setSearchGames] = useState([]);
+
+  const searchGame = ()=>{
+    fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=3`)
+    .then((response)=> response.json())
+    .then((data) =>{
+      setSearchGames(data)
+    })
+  }
   return (
     <div className="App">
-    <h1>Hello world</h1>
+    <div className = "searchSection">
+      <h1>Search For A Game</h1>
+      <input type='text' placeholder="CounterStrike..." onChange={(event)=>{
+        setGameTitle(event.target.value);
+      }}/>
+      <button onClick={searchGame}>Search Game Title</button>
+      <div className='games'>
+        {searchGames.map((game, key)=>{
+          return(
+            <div className='game' key={key}>
+              
+            {game.external}
+            </div>
+          )
+        })}
+      </div>
+    </div>
+    <div className="dealsSection">
+      <h1>Latest Deals 🔥</h1>
+
+    </div>
     </div>
   );
 }
