@@ -57,7 +57,7 @@ function App() {
         
         <h3>{deal.title}</h3>
         <img src={deal.thumb} alt = "deal-game"/>
-        <h4>
+        <h4> 
           <ul>
           <li>Sale Price- ${deal.salePrice}</li>
           <li>Normal Price - ${deal.normalPrice}</li>
