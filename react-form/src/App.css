@@ -1,0 +1,19 @@
+body{
+  margin:30px;
+
+}
+.form{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+input{
+  padding:10px;
+  border: 2px solid black;
+}
+
+p{
+  color:red;
+}
