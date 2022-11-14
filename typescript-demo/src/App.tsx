@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Person, Country } from './Person';
+import { Person } from './Person';
 
 function App() {
   
   return (
   <div className='App'>
     <Person 
-    name="Anas Khan"
-    email="khananasatique@gmail.com"
-    age={21}
-    isMarried={false}
-    friends={["arif","danish","atharva"]}
-    country = {Country.USA}
+    name="Codedamn"
+    email="codedamn@gmail.com"
+    membership= "pro"
+    favouriteNumber={3}
+    languages={["Javascript", "python", "java"]}
+    // country = {Country.USA}
     />
     </div>
   );
