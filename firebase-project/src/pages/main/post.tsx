@@ -15,7 +15,7 @@ export const Post = (props:Props) =>{
         </div>
         <div className="footer">
             <p>@{post.username}</p>
-            <button>+</button>
+            <button>💖</button>
         </div>
     </div>
 }
