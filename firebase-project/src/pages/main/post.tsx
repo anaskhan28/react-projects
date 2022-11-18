@@ -65,6 +65,7 @@ export const Post = (props:Props) =>{
         }
     } catch(error){
             console.log(error);
+            
     }
     };
     
